@@ -1,6 +1,6 @@
 <?php
 
-require_once 'JDateTime.php';
+use extensions\i18n\date\lib\JDateTime;
 
 class DateUtility
 {
@@ -100,7 +100,7 @@ class DateUtility
         } elseif ($this->monthNumber < 12) {
             return 30;
         } elseif (date('L', $this->time) == 1) {
-            return 31;
+            return 30;
         } else {
             return 29;
         }
